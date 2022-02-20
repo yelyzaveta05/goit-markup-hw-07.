@@ -17,17 +17,13 @@
 
 .footer-logo {
     font-family: "Raleway", sans-serif;
-    font-size: 26px;
-    line-height: calc(31 / 25);
-    letter-spacing: 0.03em;
+    @include font(26px, null, 31px, 0.03em);
     color: var(--accent-color);
 }
 
 .footer-logo__text {
     font-family: "Raleway", sans-serif;
-    font-size: 26px;
-    line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
+    @include font(26px, null, 31px, 0.03em);
     color: var(--hero-title-color);
 }
 
@@ -44,9 +40,7 @@
 }
 
 .address__map {
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+    @include font(14px, null, 24px, 0.03em);
     color: #ffffff;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,9 +51,7 @@
 }
 
 .address__link {
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+    @include font(14px, null, 24px, 0.03em);
     color: rgba(255, 255, 255, 0.6);
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,10 +66,7 @@
 }
 
 .footer-contacts__title {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    @include font(14px, 700, 16px, 0.03em);
     text-transform: uppercase;
     margin-bottom: 20px;
 
@@ -129,10 +118,7 @@
 }
 
 .footer-form__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
+    @include font(14px, 700, 16px, 0.03em);
     text-transform: uppercase;
     color: var(--hero-title-color);
     margin-bottom: 20px;
@@ -172,17 +158,10 @@
 .footer-btn {
     padding: 10px 29px;
     margin-left: 12px;
+    @extend %align-list;
 
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    letter-spacing: 0.06em;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
+    @include font(16px, 700, 30px, 0.06em);
     color: var(--hero-btn-title);
     border-style: none;
 

@@ -26,11 +26,9 @@
 
     width: 696px;
 
-    font-weight: 900;
-    font-size: 44px;
-    line-height: calc(60 / 44);
+    @include font(44px, 900, 60px, 0.06em);
+
     text-align: center;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero-title-color);
 }
@@ -38,15 +36,10 @@
 .hero__btn {
     padding: 10px 32px;
     margin: auto;
+    @extend %align-list;
 
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
+    @include font(16px, 700, 30px, 0.06em);
     color: var(--hero-btn-title);
 
     background: var(--accent-color);

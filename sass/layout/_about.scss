@@ -6,10 +6,8 @@
     margin-top: 0;
     margin-bottom: 50px;
 
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-    letter-spacing: 0.03em;
+    @include font(30px, null, 42px, 0.03em);
+
     color: var(--title-color);
 }
 
@@ -39,11 +37,8 @@
 
     bottom: 0;
 
-    font-weight: bold;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    @include font(14px, 700, 16px, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: var(--hero-title-color);

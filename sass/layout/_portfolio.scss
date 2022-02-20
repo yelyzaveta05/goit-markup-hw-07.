@@ -13,11 +13,8 @@
     padding: 6px 22px;
 
     font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(26 / 16);
+    @include font(16px, 500, 26px, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--portfolio-btn-color);
 
     background: #f5f4fa;
@@ -100,10 +97,7 @@
     width: 100%;
     padding: 63px 24px;
 
-    font-size: 18px;
-    line-height: calc(28 / 18);
-    letter-spacing: 0.03em;
-
+    @include font(18px, null, 28px, 0.03em);
     color: #ffffff;
 
     transform: translateY(100%);
@@ -126,16 +120,11 @@
 .portfolio__title {
     margin-bottom: 4px;
 
-    font-weight: 700;
-    font-size: 18px;
-    line-height: calc(36 / 18);
-    letter-spacing: 0.06em;
+    @include font(18px, 700, 36px, 0.06em);
     color: var(--title-color);
 }
 
 .portfolio__text {
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    letter-spacing: 0.03em;
+    @include font(16px, null, 30px, 0.03em);
     color: var(--second-text-color);
 }

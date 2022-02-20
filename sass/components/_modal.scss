@@ -36,9 +36,6 @@
 
 .modal-btn {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     top: 8px;
     right: 8px;
     width: 30px;
@@ -48,6 +45,8 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @extend %align-list;
 }
 
 .modal-btn__close {
@@ -60,11 +59,8 @@
 }
 
 .modal__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: calc(23 / 20);
+    @include font(20px, 700, 23px, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
 
     color: var(--title-color);
     margin-bottom: 12px;
@@ -73,10 +69,7 @@
 .modal-form__label {
     display: block;
     margin-bottom: 4px;
-    font-size: 12px;
-    line-height: calc(14 / 12);
-
-    letter-spacing: 0.01em;
+    @include font(20px, null, 23px, 0.03em);
 
     color: var(--second-text-color);
 }
@@ -132,9 +125,7 @@
         border-color: var(--accent-color);
     }
     &::placeholder {
-        font-size: 12px;
-        line-height: calc(14 / 12);
-        letter-spacing: 0.01em;
+        @include font(12px, null, 14px, 0.01em);
     }
 }
 
@@ -143,14 +134,10 @@
 }
 
 .modal-check__text {
-    justify-content: center;
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+    @extend %align-list;
+    @include font(14px, null, 24px, 0.03em);
 
     color: var(--second-text-color);
-    display: flex;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -160,10 +147,8 @@
     border: 2px solid var(--title-color);
     border-radius: 2px;
     margin-right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     fill: transparent;
+    @extend %align-list;
 }
 
 .modal-check__input {
@@ -194,14 +179,7 @@
     padding: 10px 55px;
 
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    letter-spacing: 0.06em;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
+    @include font(16px, 700, 16px, 0.06em);
 
     color: var(--hero-btn-title);
     background: var(--accent-color);
@@ -210,4 +188,5 @@
     border-radius: 4px;
 
     cursor: pointer;
+    @extend %align-list;
 }
